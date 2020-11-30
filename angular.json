@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CodVid"
+    }
+  },
+  "defaultProject": "CodVid",
+  "cli": {
+    "analytics": "8f7ec0c2-f3f0-4151-8347-6db0c5c48135"
+  }
 }

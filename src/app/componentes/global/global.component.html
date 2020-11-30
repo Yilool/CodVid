@@ -1,0 +1,23 @@
+<div *ngIf="loading">
+  <h1>Cargando Global y España</h1>
+</div>
+<div *ngIf="!loading">
+  <div class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">Global</div>
+    <div class="card-body">
+      <h5 class="card-title">Información</h5>
+      <p class="card-text">Confirmados: {{ global.NewConfirmed }} / {{ global.TotalConfirmed }}</p>
+      <p class="card-text">Muertos: {{ global.NewDeaths }} / {{ global.TotalDeaths }}</p>
+      <p class="card-text">Recuperados: {{ global.NewRecovered }} / {{ global.TotalRecovered }}</p>
+    </div>
+  </div>
+  <div *ngFor="let spain of country" class="card bg-light mb-3" style="max-width: 18rem;">
+    <div class="card-header">{{ spain.Country }}</div>
+    <div class="card-body">Country
+      <h5 class="card-title">Información</h5>
+      <p class="card-text">Confirmados: {{ spain.NewConfirmed }} / {{ spain.TotalConfirmed }}</p>
+      <p class="card-text">Muertos: {{ spain.NewDeaths }} / {{ spain.TotalDeaths }}</p>
+      <p class="card-text">Recuperados: {{ spain.NewRecovered }} / {{ spain.TotalRecovered }}</p>
+    </div>
+  </div>
+</div>
